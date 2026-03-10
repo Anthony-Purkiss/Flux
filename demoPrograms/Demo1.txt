@@ -1,0 +1,13 @@
+//Simple river system with default rainfall
+River r1;
+River r2;
+River r3;
+
+//Define connections
+r1 -> r2;
+r2 -> r3;
+
+//Output all flows
+output r1;
+output r2;
+output r3;

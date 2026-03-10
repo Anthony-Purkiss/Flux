@@ -1,0 +1,24 @@
+program        → declaration* EOF ;
+
+declaration    → rainfallStmt
+               | riverDecl
+               | damDecl
+               | statement ;
+
+statement      → linkStmt
+               | mergeStmt
+               | outputStmt ;
+
+rainfallStmt   → "rainfall" "(" NUMBER ( "," NUMBER )* ")" ";" ;
+
+riverDecl      → "River" IDENTIFIER ";" ;
+
+damDecl        → "Dam" IDENTIFIER "(" NUMBER "," NUMBER "," NUMBER ")" ";" ;
+
+linkStmt       → IDENTIFIER "->" IDENTIFIER ";" ;
+
+mergeStmt      → IDENTIFIER "=" expression ";" ;
+
+outputStmt     → "output" IDENTIFIER ";" ;
+
+expression     → IDENTIFIER ( "+" IDENTIFIER )* ;

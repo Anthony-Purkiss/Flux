@@ -1,0 +1,12 @@
+To compile Flux:
+
+1. Open a terminal in the root directory of the project.
+   (The folder that contains 'src' and 'demoPrograms').
+
+2. Run the following command to compile all Java source files:
+
+   javac src/flux/*.java
+
+This will create .class files in the same 'src/flux' directory.
+
+If you see no error messages, the compilation was successful.

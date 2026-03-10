@@ -1,0 +1,22 @@
+// Demonstrates how Flux handles errors without crashing
+
+River r1;
+River r2;
+River r3;
+Dam d1(2, 50, 100);
+
+// Two rainfall() statements (invalid)
+rainfall(1, 2, 3);
+rainfall(4, 5, 6);
+
+// Undeclared river
+r4 -> d1;
+
+// Duplicate declaration
+River r1;
+
+// Merge using undeclared dam
+r3 = r1 + d2;
+
+output r1;
+output d1;

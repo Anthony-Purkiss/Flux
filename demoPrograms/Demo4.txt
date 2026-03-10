@@ -1,0 +1,19 @@
+//More complicated Dam system
+rainfall(2, 5);
+
+River r1;
+River r2;
+River r3;
+River r4;
+
+Dam d1(5, 40, 80); 
+Dam d2(10, 80, 40);
+
+r1 -> d1;
+d1 -> r2;
+d2 = r2 + r3;
+d2 -> r4;
+
+output d1;
+output d2;
+output r4;

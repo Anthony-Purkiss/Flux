@@ -1,0 +1,6 @@
+//Simple dam system
+rainfall(3, 5);
+
+Dam d1(4, 20, 60);
+
+output d1;

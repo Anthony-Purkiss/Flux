@@ -1,0 +1,13 @@
+//Simple multi-day river simulation
+rainfall(2, 4, 1); //rainfall values for 3 days
+
+River r1;
+River r2;
+River r3;
+
+r1 -> r2;
+r2 -> r3;
+
+output r1; 
+output r2;
+output r3;

@@ -1,0 +1,18 @@
+To run Flux and execute an example program:
+
+1. Make sure the code has been compiled successfully
+   (see Compile.txt).
+
+2. From the root directory, run the interpreter using this command:
+
+   java -cp src flux.Flux demoPrograms/Demo1.txt
+
+   - "flux.Flux" is the main interpreter class.
+   - "demoPrograms/Demo1.txt" is the relative path to the program file.
+
+3. You can replace "Demo1.txt" with any other program in the demoPrograms folder.
+   For instance:
+
+   java -cp src flux.Flux demoPrograms/Demo2.txt
+
+4. The interpreter will print flow results to the console once execution finishes.

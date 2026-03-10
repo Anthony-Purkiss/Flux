@@ -1,0 +1,40 @@
+Flux Design Notes and Usage Tips for designing your own Flux programs.
+
+- Each program may contain at most one rainfall() statement.
+  If no rainfall() statement is provided, the system defaults to 1.0mm of rainfall for one day.
+
+- River and Dam declarations must appear before they are used in any links or merges.
+
+- Dams follow the syntax:
+      Dam damName(threshold, minPercent, maxPercent);
+  The algorithm automatically adjusts outflow based on inflow and rainfall.
+
+- River declarations follow the syntax:
+      River riverName;
+
+Full syntax can be found in the grammar.txt file. 
+
+- Each River or Dam can only flow into one downstream node.
+  However, a single downstream node can receive input from multiple upstream rivers or dams.
+
+- Link and merge statements are evaluated in the order they are parsed.
+  This means upstream connections should be written before downstream connections.
+  (For example, r1 -> r2; should appear before r2 -> r3;).
+
+- Output statements may appear anywhere and can be used multiple times.
+  Example: 
+      output r1;
+      output dam1;
+
+- Error Handling:
+  If a program contains undeclared nodes or other issues, Flux prints error messages but still executes
+  all valid parts of the program to provide partial results.
+
+Example order of a simple program:
+    rainfall(3, 2, 0);
+    River r1;
+    River r2;
+    Dam d1(5, 25, 100);
+    r1 -> d1;
+    d1 -> r2;
+    output r2;
